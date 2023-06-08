@@ -1,0 +1,3 @@
+[submodule "weblorg"]
+	path = weblorg
+	url = https://github.com/emacs-love/weblorg/
