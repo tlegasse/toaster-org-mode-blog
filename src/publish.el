@@ -8,7 +8,7 @@
 ;;; Code:
 
 ;; Guarantee the freshest version of the weblorg
-(add-to-list 'load-path "./weblorg/")
+(add-to-list 'load-path "../weblorg/")
 ;; Also support loading weblorg form /opt/weblorg. This is for use with the nanzhong/weblorg image.
 ;; See the volume mount in the Makefile for more context.
 (add-to-list 'load-path "/opt/weblorg")
@@ -36,7 +36,7 @@
  :name "posts"
  :input-pattern "posts/*.org"
  :template "post.html"
- :output "output/posts/{{ slug }}.html"
+ :output "../output/posts/{{ slug }}.html"
  :url "/posts/{{ slug }}.html")
 
 ;; Generate pages
@@ -44,7 +44,7 @@
  :name "pages"
  :input-pattern "pages/*.org"
  :template "page.html"
- :output "output/{{ slug }}/index.html"
+ :output "../output/{{ slug }}/index.html"
  :url "/{{ slug }}")
 
 ;; Generate posts summary
@@ -53,7 +53,7 @@
  :input-pattern "posts/*.org"
  :input-aggregate #'weblorg-input-aggregate-all-desc
  :template "blog.html"
- :output "output/index.html"
+ :output "../output/index.html"
  :url "/")
 
 (weblorg-route
@@ -61,11 +61,11 @@
  :input-pattern "posts/*.org"
  :input-aggregate #'weblorg-input-aggregate-all-desc
  :template "feed.xml"
- :output "output/feed.xml"
+ :output "../output/feed.xml"
  :url "/feed.xml")
 
 (weblorg-copy-static
- :output "output/static/{{ file }}"
+ :output "../output/static/{{ file }}"
  :url "/static/{{ file }}")
 
 (weblorg-export)

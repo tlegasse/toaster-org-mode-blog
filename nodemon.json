@@ -1,7 +1,7 @@
 {
     "verbose": true,
     "events": {
-        "restart": "curlylint ./src/ --config ./curlylint.toml && cd ./src/ && emacs --script publish.el && cd ../ && browser-sync --config bs-config.json reload"
+        "restart": "cd ./src/ && emacs --script publish.el && cd ../ && browser-sync --config bs-config.json reload"
     },
     "ignore": [".git", "node_modules/**/node_modules", "./output/**"],
     "watch": ["src/"],
