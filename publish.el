@@ -12,6 +12,7 @@
 ;; Also support loading weblorg form /opt/weblorg. This is for use with the nanzhong/weblorg image.
 ;; See the volume mount in the Makefile for more context.
 (add-to-list 'load-path "/opt/weblorg")
+(setq weblorg-default-url "http://localhost:3000")
 
 ;; Setup package management
 (require 'package)
