@@ -31,6 +31,7 @@
 
 (require 'weblorg)
 
+
 ;; Generate blog posts
 (weblorg-route
  :name "posts"
@@ -49,10 +50,19 @@
 
 ;; Generate posts summary
 (weblorg-route
+ :name "posts-index"
+ :input-pattern "posts/*.org"
+ :template "blog.html"
+ :input-aggregate #'weblorg-input-aggregate-all-desc
+ :output "../output/posts/index.html"
+ :url "/posts/")
+
+;; Generate posts summary
+(weblorg-route
  :name "index"
  :input-pattern "posts/*.org"
+ :template "homepage.html"
  :input-aggregate #'weblorg-input-aggregate-all-desc
- :template "blog.html"
  :output "../output/index.html"
  :url "/")
 

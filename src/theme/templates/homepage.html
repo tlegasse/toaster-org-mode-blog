@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block main %}
+    <div class="section-with-sidebar">
+        <div class="sidebar">
+            {% for post in posts %}
+                <div>
+                    <a href="{{ url_for("posts", slug=post.slug) }}">
+                        {{ post.title }}
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="content homepage-content">
+            <h1>Welcome!</h1>
+            <p>You've arrived at my blog, where I share all of the things that I love about my favorite hobby, collecting and restoring toasters!</p>
+
+            <h2>What can you find here?</h2>
+            <p>You'll get to </p>
+        </div>
+    </div>
+{% endblock %}

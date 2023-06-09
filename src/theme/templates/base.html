@@ -17,33 +17,33 @@
                   type="text/css" />
         {% endblock %}
     </head>
+
     <body>
         {# Top navigation bar #}
         {% block nav %}
             <header>
                 <h1>
                     <a href="{{ url_for("index") }}">
-                        {% block title %}{{ site_name | default("weblorg website") }}{% endblock %}
+                        {% block title %}
+                            <img src="/static/logo.jpg" alt="{{ site_name | default("weblorg website") }}">
+                        {% endblock %}
                     </a>
                 </h1>
                 <a href="#main" class="visually-hidden">jump to main content</a>
                 <nav>
                     <ul class="menu">
                         <li>
-                            <a href="{{ url_for("pages", slug="about") }}">about</a>
-                        </li>
-                        <li>
-                            <a href="{{ url_for("index") }}">Toasters</a>
+                            <a href="{{ url_for("posts-index") }}">The Toasters</a>
                         </li>
                     </ul>
                 </nav>
             </header>
         {% endblock %}
-        {# Probably where most of the action will happen #}
+
         <main id="main">
             {% block main %}{% endblock %}
         </main>
-        {# Links, copyright notice, etc #}
+
         {% block footer %}
             <footer>
                 Made with &#x2665; and&nbsp;
