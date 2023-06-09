@@ -33,6 +33,10 @@
   --cl-code-variable-name:        var(--cl-code-monokai-orange);
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
     font-family: 'Lora', serif;
     background: var(--cl-background);
@@ -42,6 +46,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 header {

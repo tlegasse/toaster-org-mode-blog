@@ -1,9 +1,12 @@
 {
     "dependencies": {
-        "http-server": "^14.1.1"
+        "browser-sync": "^2.29.3",
+        "concurrently": "^8.2.0",
+        "http-server": "^14.1.1",
+        "nodemon": "^2.0.22"
     },
     "scripts": {
-        "serve": "emacs --script publish.el && yarn http-server ./output/ -p 8000",
-        "build-prod": "emacs --script publish.prod.el"
+        "dev": "concurrently \"browser-sync start --config bs-config.json\" \"nodemon --exec http-server ./output/ -p 8001\"",
+        "build": "emacs --script publish.prod.el"
     }
 }
