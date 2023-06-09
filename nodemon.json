@@ -5,5 +5,5 @@
     },
     "ignore": [".git", "node_modules/**/node_modules", "./output/**"],
     "watch": ["src/"],
-    "ext": "org html css"
+    "ext": "org html css jpg jpeg"
 }
