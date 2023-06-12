@@ -33,7 +33,11 @@
                 <nav>
                     <ul class="menu">
                         <li>
-                            <a href="{{ url_for("posts-index") }}">The Toasters</a>
+                            <a href="{{ url_for("posts-index") }}" class="img-link"><img src="/static/blog-link-img.png" alt=""></a>
+                        </li>
+
+                        <li>
+                            <a href="{{ url_for("pages", slug="about") }}" class="img-link"><img src="/static/about-link-img.png" alt=""></a>
                         </li>
                     </ul>
                 </nav>
@@ -46,8 +50,9 @@
 
         {% block footer %}
             <footer>
-                Made with &#x2665; and&nbsp;
-                <a href="https://emacs.love/weblorg" target="_blank">weblorg</a>
+                <p>Webmaster:
+                    <a href="https://www.linkedin.com/in/tanner-legasse/" target="_blank">Tanner Legasse</a>
+                </p>
             </footer>
         {% endblock %}
     </body>

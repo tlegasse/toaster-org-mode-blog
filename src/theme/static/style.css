@@ -88,9 +88,9 @@ header nav ul li {
     display: none;
 }
 
-.menu li {
-    padding-left: 50px;
-    cursor: pointer;
+.menu {
+    display: flex;
+    gap: 1rem;
 }
 
 .menu a {
@@ -212,11 +212,48 @@ footer {
 .sidebar {
     background-color: var(--cl-foreground);
     padding: var(--section-padding);
+    width: min-content;
+    flex-grow: 1;
+    width: 25rem;
 }
 .sidebar a {
     color: var(--cl-link-light);
 }
 
 .content.homepage-content {
-    height: 50rem;
+    padding: var(--section-padding);
+}
+
+article {
+    padding: var(--section-padding);
+}
+
+article h1 {
+    margin-bottom: 2rem;
+}
+
+.img-link img {
+    max-width: 100%;
+    display: block;
+    max-height: 2rem;
+}
+
+.img-link:hover {
+    opacity: 0.8;
+}
+.sidebar ul {
+    color: white;
+    padding-left: 1.5rem;
+}
+
+.full-width {
+    width: 100%;
+}
+.indicates-required,
+.brandingLogo {
+    display: none;
+}
+
+#mc_embed_signup_scroll h2 {
+    display: none;
 }
