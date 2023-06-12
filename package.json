@@ -6,7 +6,7 @@
         "nodemon": "^2.0.22"
     },
     "scripts": {
-        "dev": "concurrently \"browser-sync start --config bs-config.json\" \"nodemon --exec http-server ./output/ -p 8001\"",
+        "dev": "concurrently \"cd ./src/ && emacs --script publish.el && cd ../ && browser-sync start --config bs-config.json\" \"nodemon --exec http-server ./output/ -p 8001\"",
         "build": "emacs --script publish.prod.el"
     }
 }
